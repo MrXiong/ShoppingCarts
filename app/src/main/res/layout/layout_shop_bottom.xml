@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/cb_select_all"
+            android:layout_width="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingRight="8dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="全选"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_delete_num"
+                android:layout_width="match_parent"
+                android:text="已删"
+                android:textSize="13sp"
+                android:gravity="bottom"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+            <TextView
+                android:id="@+id/tv_remain_num"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="还剩"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/tv_delete"
+            android:text="删除"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+    </LinearLayout>

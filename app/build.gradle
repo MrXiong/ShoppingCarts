@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.zx.shoping"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1000000
+        versionName "1.0.0"
+        // dex突破65535的限制
+        multiDexEnabled true
+        // 默认是umeng的渠道
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'cn.finalteam:okhttpfinal:2.0.6'
+    compile 'cn.finalteam.loadingviewfinal:loading-more-view:1.0.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+}
